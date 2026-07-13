@@ -1,0 +1,30 @@
+<p class="para">typescript-demo works!</p>
+
+<h2 class="color">Employee Information</h2>
+<p class="para">{{ displayEmployeeInfo() }}</p>
+
+<h2 class="color">Person Information</h2>
+<p class="para">{{ displayPersonInfo() }}</p>
+
+<h2 class="color">Coordinates</h2>
+<p class="para">Latitude: {{ coordinates[0] }}, Longitude: {{ coordinates[1] }}</p>
+
+<h2 class="color">Role</h2>
+<p class="para">Role: {{ role }}</p>
+
+<h2 class="color">Employee</h2>
+<p class="para">
+  Name: {{ employee.name }}, Age: {{ employee.age }}, Position: {{ employee.position }}
+</p>
+
+<h2 class="color">Array</h2>
+
+<p class="para">Numbers: {{ numbers.join(', ') }}</p>
+
+<hr>
+<h2>Person Service</h2>
+<ul>
+    @for(person of persons; track $index) {
+        <li>{{ person.name }} (Age: {{ person.age }})</li>
+    }
+</ul>

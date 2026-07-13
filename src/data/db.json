@@ -1,0 +1,42 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "John",
+      "designation": "Developer",
+      "salary": 55000,
+      "Status": "Active"
+    },
+    {
+      "id": 2,
+      "name": "Mary",
+      "designation": "Tester",
+      "salary": 45000,
+      "Status": "Inactive"
+    },
+    {
+      "name": "Peter",
+      "designation": "Developer",
+      "salary": 55000,
+      "id": 3,
+      "Status": "On Leave"
+    },
+    {
+      "name": "Sam",
+      "designation": "Developer",
+      "salary": 55000,
+      "id": 3,
+      "Status": "On Leave"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Jane"
+    },
+    {
+      "id": 2,
+      "name": "Sam"
+    }
+  ]
+}

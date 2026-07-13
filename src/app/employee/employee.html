@@ -1,0 +1,21 @@
+<h1>Employee List</h1>
+
+<ul>
+  @for (emp of employees; track emp.id) {
+    <li>
+      {{ emp.name }} - {{ emp.designation }} - {{ emp.salary }} - {{ emp.Status }}
+      <button (click)="edit(emp)">Edit</button>
+      <button (click)="delete(emp.id)">Delete</button>
+    </li>
+  }
+</ul>
+
+<p>{{ employees.length }} employees found.</p>
+
+<form (ngSubmit)="save()">
+  <input [(ngModel)]="employee.name" name="name" placeholder="Name">
+  <input [(ngModel)]="employee.designation" name="designation" placeholder="Designation">
+  <input [(ngModel)]="employee.salary" name="salary" placeholder="Salary">
+  <input [(ngModel)]="employee.Status" name="Status" placeholder="Status">
+  <button type="submit">Save</button>
+</form>

@@ -1,0 +1,30 @@
+<h1>Data Binding</h1>
+
+<!-- <p>
+1. Interpolation: {{ message }}
+2. Property Binding: <input [value]="message" />
+3. Event Binding: <button (click)="updateMessage()">Update Message</button>
+4. Two-way Binding: <input [(ngModel)]="message" />
+</p> -->
+
+<h3>{{ title }}</h3>
+
+<img [src]="imageUrl" alt="Angular Logo" width="200" />
+
+<button (click)="changeImage()">Change Image</button>  
+
+<button (click)="handleClick()">Click Me</button>
+
+<input (keydown)="onKeydown($event)" placeholder="Type something">
+<p>{{keyPressed}}</p>
+
+<input (focus)="onFocus()" (blur)="onBlur()" placeholder="Focus and Blur">
+<p>@if (focused) {
+  <p>Input is focused!</p>
+} @else {
+  <p>Input is blurred!</p>
+}</p>
+
+<h2>Two-way Binding</h2>
+<input [(ngModel)]="twoWayValue" placeholder="Edit me">
+<p>{{ twoWayValue }}</p>

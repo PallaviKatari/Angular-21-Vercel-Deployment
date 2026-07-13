@@ -1,0 +1,15 @@
+.color{
+    color: blue;
+    background-color: lightgray;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-style: italic;
+}
+
+.para{
+    color: rgb(251, 9, 29);
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}

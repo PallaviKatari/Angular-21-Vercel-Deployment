@@ -1,0 +1,75 @@
+<p>control-flow works!</p>
+<h3>DIRECTIVES - ANGULAR 19 AND ABOVE VERSIONS DIRECTIVES HAVE CHANGED</h3>
+<h2>if/else demo</h2>
+@if (isLoggedIn) {
+  <p>Welcome, {{ userRole }}!</p>
+} @else {
+  <p>Please log in.</p>
+}
+
+<button (click)="toggleLogin()">
+  {{ isLoggedIn ? 'Log Out' : 'Log In' }}
+</button>
+
+<h2>switch</h2>
+
+<button (click)="changeUserRole('Admin')">Admin</button>
+
+<button (click)="changeUserRole('Trainer')">Trainer</button>
+
+<button (click)="changeUserRole('Student')">Student</button>
+
+<button (click)="changeUserRole('Guest')">Guest</button>
+
+<br /><br />
+
+@switch (userRole) {
+  @case ('Student') {
+    <p>📘 Cannot Create Courses</p>
+  }
+  @case ('Admin')
+  @case ('Trainer') {
+    <p>✅ Can Create Courses</p>
+  }
+  @default {
+    <p>❓ Unknown Role</p>
+  }
+}
+
+<hr />
+
+<h2>for loop</h2>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Position</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (emp of employees; track $index) {
+      <tr>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.age }}</td>
+        <td>{{ emp.position }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<hr />
+<h2>Parent-Child Communication</h2>
+
+<app-parent></app-parent>
+
+@if (score >= 90) {
+  <p>Grade A</p>
+} @else if (score >= 75) {
+  <p>Grade B</p>
+} @else if (score >= 60) {
+  <p>Grade C</p>
+} @else {
+  <p>Failed</p>
+}
